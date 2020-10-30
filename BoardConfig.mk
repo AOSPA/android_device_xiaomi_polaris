@@ -15,8 +15,6 @@ TARGET_OTA_ASSERT_DEVICE := polaris
 
 # Display
 TARGET_SCREEN_DENSITY := 440
-TARGET_USES_COLOR_METADATA := true
-TARGET_USES_DRM_PP := true
 
 # Kernel
 KERNEL_DEFCONFIG := ../polaris_defconfig
