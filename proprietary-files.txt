@@ -281,11 +281,11 @@ vendor/lib/libpn553_fw.so
 vendor/etc/qdcm_calib_data_ebbg_fhd_video_dsi_panel.xml
 vendor/etc/qdcm_calib_data_jdi_fhd_video_dsi_panel.xml
 
-# Secure element
-vendor/bin/hw/vendor.qti.secure_element@1.0-service
-vendor/etc/init/vendor.qti.secure_element@1.0-service.rc
-vendor/lib64/hw/android.hardware.secure_element@1.0-impl.so
-vendor/lib/hw/android.hardware.secure_element@1.0-impl.so
+# Secure element - LA.UM.9.8.r1-02700-SDM710.0
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib/android.hardware.secure_element@1.0-impl.so
 
 # Sensors
 vendor/lib64/libnotifyaudiohal.so
