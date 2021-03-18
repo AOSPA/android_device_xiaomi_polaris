@@ -18,6 +18,9 @@ TARGET_OTA_ASSERT_DEVICE := polaris
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Gesture
+TARGET_TAP_TO_WAKE_EVENT_NODE := "/dev/input/event2"
+
 # Kernel
 TARGET_KERNEL_CONFIG := ../polaris_defconfig
 
