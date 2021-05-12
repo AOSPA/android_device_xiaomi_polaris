@@ -17,11 +17,6 @@ $(call inherit-product-if-exists, vendor/xiaomi/polaris/polaris-vendor.mk)
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pa
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.barometer.xml \
@@ -85,6 +80,14 @@ PRODUCT_COPY_FILES += \
 
 TARGET_COMMON_QTI_COMPONENTS += \
     nq-nfc
+
+# Overlays
+PRODUCT_PACKAGES += \
+    AOSPAPolarisFrameworks \
+    AOSPAPolarisSettings \
+    PolarisFrameworks \
+    PolarisSettings \
+    PolarisSystemUI
 
 # Secure element
 PRODUCT_PACKAGES += \
