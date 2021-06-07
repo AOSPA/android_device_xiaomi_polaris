@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2018-2020 The LineageOS Project
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2020-2021 Paranoid Android
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -59,13 +59,9 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm845
 
 # GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
-    $(LOCAL_PATH)/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
-    $(LOCAL_PATH)/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
-    $(LOCAL_PATH)/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    $(LOCAL_PATH)/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
-    $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+LOC_HIDL_VERSION = 4.0
+$(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
 
 # Input
 PRODUCT_COPY_FILES += \
